@@ -8,69 +8,159 @@
 
     <body>
 
-        <h1>الاسم: جواهر عبد الرحمن المالكي</h1>
+        <h1 class="mainH">الاسم: جواهر عبد الرحمن المالكي</h1>
         <div class="slideshow-container">
 
             <div class="mySlides fade">
-                <div class="numbertext">1 / 10</div>
+                <div class="numbertext">1 / 14</div>
                 <img src="pics/Slide1.PNG" style="width:100%">
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">2 / 10</div>
+                <div class="numbertext">2 / 14</div>
                 <img src="pics/Slide2.PNG" style="width:100%">
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">3 / 10</div>
+                <div class="numbertext">3 / 14</div>
                 <img src="pics/Slide3.PNG" style="width:100%">
             </div>
 
+
+
+
             <div class="mySlides fade">
-                <div class="numbertext">4 / 10</div>
-                <img src="pics/Slide4.PNG" style="width:100%">
+                <div class="numbertext">4 / 14</div>
+                <!-- <img src="pics/Slide4.PNG" style="width:100%"> -->
+
+                <!-- section for mcq with radio input  -->
+                <form action="action_page.php">
+                    <div class="container">
+                        <h2>السؤال الاول</h2>
+                        <p>ما هي ليلة القدر !؟ </p>
+                        هي ليلة عادية كسائر الليالي <input type="radio" name="q1" value="1"> <br>
+                        ليلة القدر هي أفضل الليالي، وقد أنزل الله فيها
+                        القرآن<input type="radio" name="q1" value="2"><br>
+                        هي الليلة الاولي من السنة الهحرية في محرم <input type="radio" name="q1" value="3"><br>
+
+                    </div>
+                    <br><br>
+
+                    <button type="submit" class="submit">ارسال </button>
+
+                </form>
+
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">5 / 10</div>
+                <div class="numbertext">5 / 14</div>
+                <img src="pics/Slide4.PNG" style="width:100%">
+
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">6 / 14</div>
+
                 <img src="pics/Slide5.PNG" style="width:100%">
             </div>
 
-
             <div class="mySlides fade">
-                <div class="numbertext">6 / 10</div>
+                <div class="numbertext">7 / 14</div>
+
+                <!-- mcq about وقت ليلة القدر -->
+                <form action="action_page.php">
+                    <div class="container">
+                        <h2>السؤال الثاني</h2>
+                        <p>متى موعد ليلة القدر ؟ </p>
+                        اول ليلة في رمضان<input type="radio" name="q2" value="1"> <br>
+                        في العشر الاواخر من رمضان <input type="radio" name="q2" value="2"><br>
+                        اول ليلة في شوال<input type="radio" name="q2" value="3"><br>
+                    </div>
+                    <br><br>
+
+                    <button type="submit" class="submit">ارسال </button>
+                </form>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">8 / 14</div>
                 <img src="pics/Slide6.PNG" style="width:100%">
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">7 / 10</div>
+                <div class="numbertext">9 / 14</div>
+
+                <!-- mcq about أعمال ليلة القدر -->
+                <form action="action_page.php">
+                    <div class="container">
+                        <h2>السؤال الثالث</h2>
+                        <p>ما هي أعمال ليلة القدر ؟ </p>
+                        <!-- use check box -->
+                        الاكثار من الطاعات <input type="checkbox" name="q3" value="1"> <br>
+                        السباحه <input type="checkbox" name="q3" value="2"><br>
+                        قيام الليل <input type="checkbox" name="q3" value="3"><br>
+                        اللعب واللهو <input type="checkbox" name="q3" value="4"><br>
+                        كثرة الذكر والدعاء <input type="checkbox" name="q3" value="5"><br>
+
+
+                    </div>
+                    <br><br>
+
+                    <button type="submit" class="submit">ارسال </button>
+                </form>
+            </div>
+
+
+            <div class="mySlides fade">
+                <div class="numbertext">10 / 14</div>
                 <img src="pics/Slide7.PNG" style="width:100%">
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">8 / 10</div>
+                <div class="numbertext">11 / 14</div>
                 <img src="pics/Slide8.PNG" style="width:100%">
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">9 / 10</div>
+                <div class="numbertext">12 / 14</div>
                 <img src="pics/Slide9.PNG" style="width:100%">
             </div>
 
 
+
             <div class="mySlides fade">
-                <div class="numbertext">10 / 10</div>
+                <div class="numbertext">13 / 14</div>
                 <img src="pics/Slide10.PNG" style="width:100%">
             </div>
 
-            <a class="next" onclick="plusSlides(-1)">❮</a>
-            <a class="prev" onclick="plusSlides(1)">❯</a>
+            <div class="mySlides fade">
+                <div class="numbertext">14 / 14</div>
+
+                <!-- اسأله عن الاعتكاف  -->
+                <form action="action_page.php">
+                    <div class="container">
+                        <h2>السؤال الرابع</h2>
+                        <p> الاغتكاف سنة عن النبي ويجب ان يكون الاعتكاف في </p>
+                        <input type="text" name="q4"> <br>
+
+                    </div>
+                    <br><br>
+
+                    <button type="submit" class="submit">ارسال </button>
+
+                </form>
+            </div>
+            <a class="next" onclick="plusSlides(-1)"> ❯</a>
+            <a class="prev" onclick="plusSlides(1)"> ❮</a>
 
         </div>
         <br>
 
         <div style="text-align:center">
 
+            <span class="dot" onclick="currentSlide(14)"></span>
+            <span class="dot" onclick="currentSlide(13)"></span>
+            <span class="dot" onclick="currentSlide(12)"></span>
+            <span class="dot" onclick="currentSlide(11)"></span>
             <span class="dot" onclick="currentSlide(10)"></span>
             <span class="dot" onclick="currentSlide(9)"></span>
             <span class="dot" onclick="currentSlide(8)"></span>
