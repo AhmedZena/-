@@ -3,6 +3,7 @@
 
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ليلة القدر</title>
         <link rel="stylesheet" href="style.css">
     </head>
 
@@ -26,29 +27,21 @@
                 <img src="pics/Slide3.PNG" style="width:100%">
             </div>
 
-
-
-
             <div class="mySlides fade">
                 <div class="numbertext">4 / 14</div>
-                <!-- <img src="pics/Slide4.PNG" style="width:100%"> -->
 
-                <!-- section for mcq with radio input  -->
-                <form action="action_page.php">
-                    <div class="container">
-                        <h2>السؤال الاول</h2>
-                        <p>ما هي ليلة القدر !؟ </p>
-                        هي ليلة عادية كسائر الليالي <input type="radio" name="q1" value="1"> <br>
-                        ليلة القدر هي أفضل الليالي، وقد أنزل الله فيها
-                        القرآن<input type="radio" name="q1" value="2"><br>
-                        هي الليلة الاولي من السنة الهحرية في محرم <input type="radio" name="q1" value="3"><br>
+                <div class="container">
+                    <h2>السؤال الاول</h2>
+                    <p>ما هي ليلة القدر !؟ </p>
+                    هي ليلة عادية كسائر الليالي <input type="radio" name="q1" value="1"> <br>
+                    ليلة القدر هي أفضل الليالي، وقد أنزل الله فيها
+                    القرآن<input type="radio" name="q1" value="2"><br>
+                    هي الليلة الاولي من السنة الهحرية في محرم <input type="radio" name="q1" value="3"><br>
 
-                    </div>
-                    <br><br>
 
-                    <button type="submit" class="submit">ارسال </button>
+                    <button type="submit" class="submit" onclick="questionOne()">ارسال </button>
+                </div>
 
-                </form>
 
             </div>
 
@@ -66,20 +59,18 @@
 
             <div class="mySlides fade">
                 <div class="numbertext">7 / 14</div>
-
                 <!-- mcq about وقت ليلة القدر -->
-                <form action="action_page.php">
-                    <div class="container">
-                        <h2>السؤال الثاني</h2>
-                        <p>متى موعد ليلة القدر ؟ </p>
-                        اول ليلة في رمضان<input type="radio" name="q2" value="1"> <br>
-                        في العشر الاواخر من رمضان <input type="radio" name="q2" value="2"><br>
-                        اول ليلة في شوال<input type="radio" name="q2" value="3"><br>
-                    </div>
-                    <br><br>
 
-                    <button type="submit" class="submit">ارسال </button>
-                </form>
+                <div class="container">
+                    <h2>السؤال الثاني</h2>
+                    <p>متى موعد ليلة القدر ؟ </p>
+                    اول ليلة في رمضان<input type="radio" name="q2" value="1"> <br>
+                    اول ليلة في شوال<input type="radio" name="q2" value="2"><br>
+                    في العشر الاواخر من رمضان <input type="radio" name="q2" value="3"><br>
+
+                    <button type="submit" class="submit" onclick="questionTwo()">ارسال </button>
+                </div>
+
             </div>
             <div class="mySlides fade">
                 <div class="numbertext">8 / 14</div>
@@ -90,23 +81,20 @@
                 <div class="numbertext">9 / 14</div>
 
                 <!-- mcq about أعمال ليلة القدر -->
-                <form action="action_page.php">
-                    <div class="container">
-                        <h2>السؤال الثالث</h2>
-                        <p>ما هي أعمال ليلة القدر ؟ </p>
-                        <!-- use check box -->
-                        الاكثار من الطاعات <input type="checkbox" name="q3" value="1"> <br>
-                        السباحه <input type="checkbox" name="q3" value="2"><br>
-                        قيام الليل <input type="checkbox" name="q3" value="3"><br>
-                        اللعب واللهو <input type="checkbox" name="q3" value="4"><br>
-                        كثرة الذكر والدعاء <input type="checkbox" name="q3" value="5"><br>
+
+                <div class="container">
+                    <h2>السؤال الثالث</h2>
+                    <p>ما هي أعمال ليلة القدر ؟ </p>
+                    الاكثار من الطاعات <input type="checkbox" name="q3" value="1"> <br>
+                    السباحه <input type="checkbox" name="q3" value="2"><br>
+                    قيام الليل <input type="checkbox" name="q3" value="3"><br>
+                    اللعب واللهو <input type="checkbox" name="q3" value="4"><br>
+                    كثرة الذكر والدعاء <input type="checkbox" name="q3" value="5"><br>
+
+                    <button type="submit" class="submit" onclick="questionThree()">ارسال </button>
+                </div>
 
 
-                    </div>
-                    <br><br>
-
-                    <button type="submit" class="submit">ارسال </button>
-                </form>
             </div>
 
 
@@ -136,21 +124,19 @@
                 <div class="numbertext">14 / 14</div>
 
                 <!-- اسأله عن الاعتكاف  -->
-                <form action="action_page.php">
-                    <div class="container">
-                        <h2>السؤال الرابع</h2>
-                        <p> الاغتكاف سنة عن النبي ويجب ان يكون الاعتكاف في </p>
-                        <input type="text" name="q4"> <br>
 
-                    </div>
-                    <br><br>
+                <div class="container">
+                    <h2>السؤال الرابع</h2>
+                    <p style="font-size: 20px;"> الاعتكاف سنة عن النبي ويجب ان يكون الاعتكاف في </p>
+                    <input type="text" id="q4"> <br>
+                    <button type=" submit" class="submit" onclick="questionFour()">ارسال </button>
+                </div>
 
-                    <button type="submit" class="submit">ارسال </button>
 
-                </form>
             </div>
             <a class="next" onclick="plusSlides(-1)"> ❯</a>
             <a class="prev" onclick="plusSlides(1)"> ❮</a>
+
 
         </div>
         <br>
@@ -173,6 +159,25 @@
             <span class="dot" onclick="currentSlide(1)"></span>
         </div>
 
+        <div class="popup " id="popupRight">
+            <img src="pics/right.png">
+            <h2>ممتاز </h2>
+            <p>الاجابة صحيحة</p>
+            <button type="button " onclick="closePopup(1)">استمر</button>
+        </div>
+
+        <div class="popup " id="popupWrong">
+            <img src="pics/wrong.png">
+            <h2>للاسف اجابة خاطئة </h2>
+            <p>الرجاء المحاولة مرة اخرى </p>
+            <button type="button " onclick="closePopup(0)" style="background-color: red;">اعادة المحاولة</button>
+        </div>
+
+        <div class="popup " id="popupChoice">
+
+            <p>الرجاء الاجابة ع السؤال </p>
+            <button type="button " onclick="closePopup(0)" style="background-color: red;">اعادة المحاولة</button>
+        </div>
 
 
     </body>
