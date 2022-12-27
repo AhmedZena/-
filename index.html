@@ -13,22 +13,22 @@
         <div class="slideshow-container">
 
             <div class="mySlides fade">
-                <div class="numbertext">1 / 14</div>
+                <div class="numbertext">1 / 15</div>
                 <img src="pics/Slide1.PNG" style="width:100%">
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">2 / 14</div>
+                <div class="numbertext">2 / 15</div>
                 <img src="pics/Slide2.PNG" style="width:100%">
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">3 / 14</div>
+                <div class="numbertext">3 / 15</div>
                 <img src="pics/Slide3.PNG" style="width:100%">
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">4 / 14</div>
+                <div class="numbertext">4 / 15</div>
 
                 <div class="container">
                     <h2>السؤال الاول</h2>
@@ -46,19 +46,19 @@
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">5 / 14</div>
-                <img src="pics/Slide4.PNG" style="width:100%">
-
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">6 / 14</div>
-
+                <div class="numbertext">5 / 15</div>
                 <img src="pics/Slide5.PNG" style="width:100%">
+
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">7 / 14</div>
+                <div class="numbertext">6 / 15</div>
+
+                <img src="pics/Slide6.PNG" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">7 / 15</div>
                 <!-- mcq about وقت ليلة القدر -->
 
                 <div class="container">
@@ -73,12 +73,12 @@
 
             </div>
             <div class="mySlides fade">
-                <div class="numbertext">8 / 14</div>
-                <img src="pics/Slide6.PNG" style="width:100%">
+                <div class="numbertext">8 / 15</div>
+                <img src="pics/Slide8.PNG" style="width:100%">
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">9 / 14</div>
+                <div class="numbertext">9 / 15</div>
 
                 <!-- mcq about أعمال ليلة القدر -->
 
@@ -99,29 +99,29 @@
 
 
             <div class="mySlides fade">
-                <div class="numbertext">10 / 14</div>
-                <img src="pics/Slide7.PNG" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">11 / 14</div>
-                <img src="pics/Slide8.PNG" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">12 / 14</div>
-                <img src="pics/Slide9.PNG" style="width:100%">
-            </div>
-
-
-
-            <div class="mySlides fade">
-                <div class="numbertext">13 / 14</div>
+                <div class="numbertext">10 / 15</div>
                 <img src="pics/Slide10.PNG" style="width:100%">
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">14 / 14</div>
+                <div class="numbertext">11 / 15</div>
+                <img src="pics/Slide11.PNG" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">12 / 15</div>
+                <img src="pics/Slide12.PNG" style="width:100%">
+            </div>
+
+
+
+            <div class="mySlides fade">
+                <div class="numbertext">13 / 15</div>
+                <img src="pics/Slide13.PNG" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">14 / 15</div>
 
                 <!-- اسأله عن الاعتكاف  -->
 
@@ -133,6 +133,11 @@
                 </div>
 
 
+
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">15 / 15</div>
+                <img src="pics/Slide15.PNG" style="width:100%">
             </div>
             <a class="next" onclick="plusSlides(-1)"> ❯</a>
             <a class="prev" onclick="plusSlides(1)"> ❮</a>
@@ -143,6 +148,7 @@
 
         <div style="text-align:center">
 
+            <span class="dot" onclick="currentSlide(15)"></span>
             <span class="dot" onclick="currentSlide(14)"></span>
             <span class="dot" onclick="currentSlide(13)"></span>
             <span class="dot" onclick="currentSlide(12)"></span>
@@ -159,6 +165,7 @@
             <span class="dot" onclick="currentSlide(1)"></span>
         </div>
 
+        <!-- popup when right answer -->
         <div class="popup " id="popupRight">
             <img src="pics/right.png">
             <h2>ممتاز </h2>
@@ -166,6 +173,7 @@
             <button type="button " onclick="closePopup(1)">استمر</button>
         </div>
 
+        <!-- popup when wrong answer -->
         <div class="popup " id="popupWrong">
             <img src="pics/wrong.png">
             <h2>للاسف اجابة خاطئة </h2>
@@ -173,12 +181,22 @@
             <button type="button " onclick="closePopup(0)" style="background-color: red;">اعادة المحاولة</button>
         </div>
 
+        <!-- popup when no answer -->
         <div class="popup " id="popupChoice">
 
             <p>الرجاء الاجابة ع السؤال </p>
             <button type="button " onclick="closePopup(0)" style="background-color: red;">اعادة المحاولة</button>
         </div>
 
+
+        <!-- popup to choose if to get item from local storage -->
+        <div class="popup " id="popupGetItem">
+            <h2>هل تريد استكمال رحلتك ؟ </h2>
+            <div class="buttons">
+                <button type="button " onclick="getItem()">نعم</button>
+                <button type="button " onclick="closePopup(2)" style="background-color: red;">لا</button>
+            </div>
+        </div>
 
     </body>
 

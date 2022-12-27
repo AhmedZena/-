@@ -1,43 +1,95 @@
 let popupRight = document.getElementById("popupRight");
 let popupWrong = document.getElementById("popupWrong");
 let popup = document.getElementById("popupChoice");
+let popupGetItem = document.getElementById("popupGetItem");
 let mainContainer = document.getElementsByClassName("slideshow-container");
+let slides = document.getElementsByClassName("mySlides");
+let dots = document.getElementsByClassName("dot");
 
-let slideIndex = 1;
-showSlides(slideIndex);
+// get the slide number from the local storage and go to if it's exist
+if (
+  localStorage.getItem("slideIndex") == null ||
+  localStorage.getItem("slideIndex") == 1
+) {
+  var slideIndex = 1;
+  mainContainer[0].style.opacity = "1";
+  showSlides(slideIndex);
+} else {
+  popupGetItem.style.display = "block";
+  mainContainer[0].style.opacity = "0";
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].style.display = "none";
+  }
+}
 
+// func to get the slide number from the local storage
+function getItem() {
+  slideNum = localStorage.getItem("slideIndex");
+  mainContainer[0].style.opacity = "1";
+  popupGetItem.style.display = "none";
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].style.display = "inline-block";
+  }
+  showSlides(slideNum);
+}
+
+// func to change the slide when click on the arrow
 function plusSlides(n) {
   showSlides((slideIndex += n));
 }
 
+// func to change the slide when click on the dot
 function currentSlide(n) {
   showSlides((slideIndex = n));
 }
 
+// func to show the slides
 function showSlides(n) {
+  n = parseInt(n);
   let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  //   console.log(dots);
   if (n > slides.length) {
     slideIndex = 1;
-  }
-  if (n < 1) {
+  } else if (n < 1) {
     slideIndex = slides.length;
+  } else {
+    slideIndex = n;
   }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
-    //   for (i = dots.length - 1; i >= 0; i--) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
+  console.log(slideIndex);
   slides[slideIndex - 1].style.display = "block";
   dots[slides.length - slideIndex].className += " active";
+  localStorage.setItem("slideIndex", slideIndex);
 }
 
-// function to run when the button is clicked which will check if the chosen radio button is correct or not
+// func to close the popup
+function closePopup(num) {
+  //   plusSlides(1);
+  mainContainer[0].style.opacity = "1";
+  if (num === 1) {
+    popupRight.style.display = "none";
+    plusSlides(1);
+  } else if (num === 0) {
+    popupWrong.style.display = "none";
+    popup.style.display = "none";
+  } else if (num === 2) {
+    popupGetItem.style.display = "none";
+    showSlides(1);
 
+    for (let i = 0; i < dots.length; i++) {
+      dots[i].style.display = "inline-block";
+    }
+  }
+}
+
+/////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+
+// question 1
 function questionOne() {
   // if no radio selected
   if (document.querySelector('input[name="q1"]:checked') == null) {
@@ -60,19 +112,6 @@ function questionOne() {
     // alert("Wrong");
     popupWrong.style.display = "block";
     mainContainer[0].style.opacity = "0.3";
-  }
-}
-
-// func to close the popup
-function closePopup(num) {
-  //   plusSlides(1);
-  mainContainer[0].style.opacity = "1";
-  if (num === 1) {
-    popupRight.style.display = "none";
-    plusSlides(1);
-  } else if (num === 0) {
-    popupWrong.style.display = "none";
-    popup.style.display = "none";
   }
 }
 

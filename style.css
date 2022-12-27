@@ -170,6 +170,12 @@ input[type="checkbox"] {
   cursor: pointer;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
 @keyframes fade {
   from {
     opacity: 0.4;
